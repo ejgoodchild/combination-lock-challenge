@@ -15,7 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Letter Combination Challenge.cpp">
+    <Text Include="dictionary.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="wheels.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
