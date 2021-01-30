@@ -17,7 +17,7 @@ struct Lock {
     int numOfWheels = 0;
     int numOfLetters = 0;
     char* wheels = nullptr;
-
+    int wordsFound = 0;
     bool isValid() { return numOfWheels > 0 && numOfLetters > 0 && wheels; }
 };
 
@@ -139,9 +139,9 @@ void loadLock(ifstream* file, Lock* lock) {
     int y =0;
     while (getline(*file, line)) {
         if (isValidAlpha(line) && line.length() == lock->numOfLetters) {
-            for (int x = 0; x < lock->numOfLetters; x++) {
+            for (int x = 0; x < lock->numOfLetters; x++) 
                 lock->wheels[x + y* lock->numOfLetters] = toupper(line.at(x));
-           }
+           
 
         }
         else {
@@ -180,16 +180,20 @@ void loadLock(string filename, Lock* lock) {
 
 /**
  * Scans string from position n and works backwards to
- * attempt to find some words. If found the word it is
- * printed out. 
+ * attempt to find some words. If the word is found it is
+ * printed out and the locks words found counter is incremented. 
  *
  * @param the string to scan, the n position and a pointer
- * to the dictionary
+ * to the dictionary, pointer to the lock
  */
-void scanString(string val, int n, vector<string>* dictionary) {
+void scanString(string val, int n, vector<string>* dictionary, Lock* lock) {
+    string str;
     for (int s = 0; s < n; s++) {
-        if (binary_search(dictionary->begin(), dictionary->end(), val.substr(s, n - s)))
-            cout << val.substr(s, n - s) << endl;
+        str = val.substr(s, n - s);
+        if (binary_search(dictionary->begin(), dictionary->end(), str)) {
+            cout << str << endl;
+            lock->wordsFound++;
+        }
     }
 }
 
@@ -206,7 +210,7 @@ void checkCombinations(Lock* lock, vector<string>* dictionary, int n = 0,  strin
     for (int i = 0; i < lock->numOfLetters; i++) {
         val = lock->wheels[n * lock->numOfLetters + i ];
         
-        if (n > 0) scanString(temp + val, n+1, dictionary);
+        if (n > 0) scanString(temp + val, n+1, dictionary, lock);
         
         if (n == lock->numOfWheels - 1)  continue;
         else checkCombinations(lock,dictionary,n+1,temp+val);
@@ -227,7 +231,7 @@ int main()
 
     cout << "Computing..." << endl;
     checkCombinations(&lock, &dictionary);
-
+    cout << "Found " << lock.wordsFound << " words" << endl;
     return 0;
 }
 

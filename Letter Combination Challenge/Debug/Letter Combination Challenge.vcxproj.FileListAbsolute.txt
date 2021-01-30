@@ -1,2 +1,2 @@
-C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\Debug\Letter Combination Challenge.exe
-C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\Debug\Letter Combination Challenge.pdb
+C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\Debug\find_words.exe
+C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\Debug\find_words.pdb
