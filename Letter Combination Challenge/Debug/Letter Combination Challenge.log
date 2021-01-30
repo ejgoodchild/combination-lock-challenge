@@ -1,4 +1,6 @@
 ﻿  main.cpp
-C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\main.cpp(53,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\main.cpp(61,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\main.cpp(39,27): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\main.cpp(40,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\main.cpp(85,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\main.cpp(99,23): warning C4018: '<': signed/unsigned mismatch
   Letter Combination Challenge.vcxproj -> C:\Users\Ethan\Documents\GitHub\letter-combination-challenge\Letter Combination Challenge\Debug\Letter Combination Challenge.exe

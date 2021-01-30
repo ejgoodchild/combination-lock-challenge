@@ -24,6 +24,9 @@
     <Text Include="wheels.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="wheels2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
