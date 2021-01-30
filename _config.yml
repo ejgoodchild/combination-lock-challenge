@@ -1,1 +1,4 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-midnight
+name: Pasta Master
+title: false
+show download: false
