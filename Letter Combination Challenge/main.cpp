@@ -142,7 +142,6 @@ void loadLock(ifstream* file, Lock* lock) {
             for (int x = 0; x < lock->numOfLetters; x++) 
                 lock->wheels[x + y* lock->numOfLetters] = toupper(line.at(x));
            
-
         }
         else {
             cout << "This line is invalid: " << line << "is invalid" << endl;
@@ -220,13 +219,14 @@ void checkCombinations(Lock* lock, vector<string>* dictionary, int n = 0,  strin
 }
 
 
-int main()
+int main(int argc,char* argv[])
 {
     Lock lock;
-    loadLock("wheels2.txt", &lock);
+    loadLock(argv[1], &lock);
+
     if (!lock.isValid()) return -1;
 
-    vector<string> dictionary = loadDictionary("dictionary.txt", lock.numOfWheels);    
+    vector<string> dictionary = loadDictionary(argv[2], lock.numOfWheels);
     if (dictionary.size() == 0) return -1;
 
     cout << "Computing..." << endl;
