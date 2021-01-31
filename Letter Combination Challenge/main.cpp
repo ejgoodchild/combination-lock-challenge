@@ -221,6 +221,8 @@ void checkCombinations(Lock* lock, vector<string>* dictionary, int n = 0,  strin
 
 int main(int argc,char* argv[])
 {
+    if (!argv[1] || !argv[2]) return -1;
+
     Lock lock;
     loadLock(argv[1], &lock);
 
